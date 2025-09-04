@@ -1,166 +1,187 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-  <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="bookmark" href="favicon.ico" type="image/x-icon" />
-  <title>Xufeng Liu</title>
-  <style>
-    body {
-      font-family: 'Inter', 'Segoe UI', sans-serif;
-    }
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <table summary="Table for page layout." id="tlayout">
-    <tr valign="top">
-      <td id="layout-menu">
-        <div class="menu-category">Menu</div>
-        <div class="menu-item"><a href="index.html" class="current">Home</a></div>
-      </td>
+---
+layout: default
+title: Home
+---
+<!-- ========== BIO ========== -->
+<div class="docs-section" id="bio">
+  <h4>Bio</h4>
+  <p>
+  I am a second-year Ph.D. student in Computer Science at Stony Brook University, advised by <a href="https://jacoblau0513.github.io">Prof. Yi Liu</a>. 
+  </p>
 
-      <td id="layout-content">
-        <div id="toptitle">
-          <h1>Xufeng Liu</h1>
+  <p>
+  My research interests include Explainable AI, AI for Science, and LLMs for Science.
+</div>
+
+<!-- ========== News ========== -->
+<div class="docs-section" id="news">  
+  <h4>News</h4>
+  <div>
+    <table border="1" style="border-width: 0px;" width="1050">
+      <tbody>
+        <tr>
+          <td style="border-style: none; border-width: medium;">
+            <ul class="STYLE238">
+              <li>05/2025: Paper <a href="">An RL Agent for Drug Discovery</a> accepted to the ACL 2025 Findings Track.</li>
+              <li>04/2025: Presented work on RL Agent at the IACS Research Day.</li>
+              <li>12/2024: Passed the CS qualifier.</li>
+              <li>11/2024: Paper <a href="https://dl.acm.org/doi/10.1145/3690624.3709302">3DGraphX</a> accepted to KDD 2025.</li>
+              <li>03/2024: Presented work on XAI for Science at the <a href="https://www3.cs.stonybrook.edu/~grd/">CS Graduate Research Day</a>.</li>
+              <li>01/2024: Joined Stony Brook University as a CS PhD student in Spring 2024.</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- ========== PUBLICATIONS ========== -->
+<div class="docs-section" id="publications">
+  <h4>Publications</h4>
+
+  <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
+  * indicates equal contribution. <br/>
+  <sup>&#8225;</sup> indicates equal senior contribution.
+  </p>
+
+  <ul class="tab-nav">
+    <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
+    <li><div class="button" data-ref="#papers-all">All</div></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="papers-selected">
+      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
+      {% for paper in selected_papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+             
+            {% if paper.project_page %}
+              <a class="button" href="{{ paper.project_page }}" target="_blank">Project Page</a>
+            {% endif %}
+             
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
+            {% endif %}
+
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides }}" target="_blank">Slides</a>
+            {% endif %}
+
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster }}" target="_blank">Poster</a>
+            {% endif %}
+
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
+
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
+
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
+          </div>
         </div>
+      {% endfor %}
+    </div>
 
-        <table class="imgtable">
-          <tr>
-            <td>
-              <a href="https://xufliu.github.io/"><img src="Pic.jpg" alt="Xufeng Liu" width="131px" height="160px" /></a>
-            </td>
-            <td align="left">
-              <p><b>Ph.D. Student in Computer Science</b><br />
-              Department of Computer Science, Stony Brook University<br />
-              <br />
-              Email: <a href="mailto:xufeng.liu@stonybrook.edu">xufeng.liu@stonybrook.edu</a><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:xufliu@cs.stonybrook.edu">xufliu@cs.stonybrook.edu</a>
-                <p>
-  <a href="https://scholar.google.com/citations?user=SGHOgK8AAAAJ&hl=en" target="_blank">
-    <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 20px; height: 20px; vertical-align: middle;" />
-  </a>
-</p>
-              </p>
-            </td>
-          </tr>
-        </table>
+    <div class="tab-pane" id="papers-all">
+      {% for paper in site.data.publications.papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+             
+            {% if paper.project_page %}
+              <a class="button" href="{{ paper.project_page }}" target="_blank">Project Page</a>
+            {% endif %}
 
-        <h2>About Me</h2>
-        <p>I am a second-year Ph.D. student in Computer Science at Stony Brook University, advised by <a href="https://jacoblau0513.github.io">Prof. Yi Liu</a>.</p>
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
+            {% endif %}
 
-        <h2>Research</h2>
-        <h3>Research Interests</h3>
-        <ul>
-          <li>3D Graph Explanation</li>
-          <li>Trustworthy AI — Robustness & Fairness in 3D Molecular Graphs</li>
-          <li>Scientific Explanation with LLMs</li>
-        </ul>
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides }}" target="_blank">Slides</a>
+            {% endif %}
 
-        <h3>Current Projects</h3>
-        <ul>
-          <li>Robustness in 3D Molecular Graphs</li>
-          <li>LLMs for Scientific Discovery</li>
-        </ul>
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster }}" target="_blank">Poster</a>
+            {% endif %}
 
-        <h3 style="font-family: Georgia, serif; font-size: 24px; margin-bottom: 8px;">Academic Service</h3>
-<p style="font-weight: bold; font-size: 16px;">Reviewer:</p>
-<ul style="font-family: Georgia, serif; font-size: 15px; line-height: 1.6; padding-left: 20px; list-style-type: disc;">
-  <li>ACM Transactions on Knowledge Discovery from Data (TKDD), 2024</li>
-  <li>International Conference on Machine Learning (ICML), 2024, 2025</li>
-  <li>Conference on Neural Information Processing Systems (NeurIPS), 2024, 2025</li>
-  <li>International Conference on Learning Representations (ICLR), 2025</li>
-</ul>
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
 
-        <h2 style="font-family: Georgia, serif; font-size: 28px; margin-bottom: 10px;">Publications</h2>
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
 
-<ol style="font-family: Georgia, serif; line-height: 1.7; font-size: 16px; padding-left: 20px; list-style-position: inside;">
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== Service ========== -->
+<div class="docs-section" id="service">
+  <h4>Service</h4>
   
-  <li style="margin-bottom: 30px;">
-    <span style="font-weight: bold;">Xufeng Liu*</span>, Yixuan Ding*, Jingxiang Qu, Yichi Zhang, Wenhan Gao†, Yi Liu†<br />
-    <span style="font-size: 17px; font-weight: bold; display: inline-block; margin-top: 4px;">An LLM Agent for Molecular Optimization and Drug Pharmaceutical Improvement</span><br />
-    <em>Findings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL), 2025.</em>
-    <!-- Commented out temporarily
-    <br />
-    📄 <a href="https://arxiv.org/pdf/2505.02247" target="_blank">Read Paper</a> | 
-    📚 <a href="https://github.com/QuJX/RISE" target="_blank">Code</a>
-    <br />
-    <details>
-      <summary style="cursor: pointer; margin-top: 8px;">🔖 Show BibTeX</summary>
-      <pre style="background-color: #f9f9f9; padding: 12px; border: 1px solid #ccc; border-radius: 5px; overflow-x: auto;">
-        ... BibTeX here ...
-      </pre>
-    </details>
-    -->
-  </li>
+  <p style="text-align:left"><b>Conference/Journal Reviewer:</b></p>
+  <ul class="STYLE238">
+    <li>International Conference on Learning Representations (ICLR) 2025-2026</li>
+    <li>Conference on Neural Information Processing Systems (NeurIPS) 2024-2025</li>
+    <li>International Conference on Machine Learning (ICML) 2024-2025</li>
+    <li>ACM Transactions on Knowledge Discovery from Data (TKDD) 2024</li>
+  </ul>
+  
+</div>
 
-  <li style="margin-bottom: 30px;">
-    Jingxiang Qu*, Wenhan Gao*, Jiaxing Zhang, <b>Xufeng Liu</b>, Hua Wei, Haibin Ling, Yi Liu.<br />
-    <span style="font-size: 17px; font-weight: bold; display: inline-block; margin-top: 4px;">RISE: Radius of Influence based Subgraph Extraction for 3D Molecular Graph Explanation</span><br />
-    <em>The Forty-second International Conference on Machine Learning (ICML), 2025</em><br />
-    📄 <a href="https://arxiv.org/pdf/2505.02247" target="_blank">Read Paper</a> |
-    📚 <a href="https://github.com/QuJX/RISE" target="_blank">Code</a>
-    <br />
-    <details style="margin-top: 8px;">
-      <summary style="cursor: pointer;">🔖 Show BibTeX</summary>
-      <pre style="background-color: #f9f9f9; padding: 12px; border: 1px solid #ccc; border-radius: 5px; overflow-x: auto;">
-@article{qu2025rise,
-  title={RISE: Radius of Influence based Subgraph Extraction for 3D Molecular Graph Explanation},
-  author={Qu, Jingxiang and Gao, Wenhan and Zhang, Jiaxing and Liu, Xufeng and Wei, Hua and Ling, Haibin and Liu, Yi},
-  journal={arXiv preprint arXiv:2505.02247},
-  year={2025}
-}
-      </pre>
-    </details>
-  </li>
 
-  <li style="margin-bottom: 30px;">
-    <b>Xufeng Liu</b>, Dongsheng Luo, Wenhan Gao, Yi Liu.<br />
-    <span style="font-size: 17px; font-weight: bold; display: inline-block; margin-top: 4px;">3DGraphX: Explaining 3D Molecular Graph Models via Incorporating Chemical Priors</span><br />
-    <em>Proceedings of the 31st SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), 2025</em><br />
-    📄 <a href="https://dl.acm.org/doi/10.1145/3690624.3709302" target="_blank">Read Paper</a> |
-    📺 <a href="https://www.youtube.com/watch?v=l0g15VZxiFs" target="_blank">Watch Presentation</a> |
-    📚 <a href="https://github.com/xufliu/3DGraphX" target="_blank">Code</a>
-    <br />
-    <details style="margin-top: 8px;">
-      <summary style="cursor: pointer;">🔖 Show BibTeX</summary>
-      <pre style="background-color: #f9f9f9; padding: 12px; border: 1px solid #ccc; border-radius: 5px; overflow-x: auto;">
-@inproceedings{liu20253dgraphx,
-  title={3DGraphX: Explaining 3D Molecular Graph Models via Incorporating Chemical Priors},
-  author={Liu, Xufeng and Luo, Dongsheng and Gao, Wenhan and Liu, Yi},
-  booktitle={Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V. 1},
-  pages={859--870},
-  year={2025}
-}
-      </pre>
-    </details>
-  </li>
+<!-- ========== RESUME ========== -->
+<div class="docs-section" id="resume">
+  <h4>Vitæ</h4>
 
-</ol>
+  <!-- The Timeline -->
+  <ul class="timeline">
+    {% for exp in site.data.experience.experiences %}
+    <li>
+      {% if exp.category == "work" %}
+      <div class="direction-l">
+      {% else %}
+      <div class="direction-r">
+      {% endif %}
+        <div class="flag-wrapper">
+          <span class="flag">{{ exp.place }}</span>
+          <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+        </div>
+        <div class="desc"><b>{{ exp.title }}</b> <br/> {{ exp.subtitle }}</div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 
-        <h2>Education</h2>
-        <ul>
-          <li>M.E., Computer Science, <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>, 08.2022</li>
-        </ul>
 
-        <p><br /></p>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
+<!-- ========== Acknowledgement ========== -->
+<div class="docs-section" id="awards">
+  <h4>Acknowledgement</h4>
+  <p> This website was built using the template provided by <a href="https://faculty.washington.edu/msaveski/">Martin Saveski</a>.
+</p>
+
+</div>

@@ -1,14 +1,13 @@
 papers:
 
   - title: "An LLM Agent for Molecular Optimization and Drug Pharmaceutical Improvement"
-    authors: "<b>Xufeng Liu</b>, Yixuan Ding*, Jingxiang Qu, Yichi Zhang, Wenhan Gao†, Yi Liu†"
+    authors: "<b>Xufeng Liu<sup>*</sup></b>, Yixuan Ding<sup>*</sup>, Jingxiang Qu, Yichi Zhang, Wenhan Gao<sup>&#8225;</sup>, Yi Liu<sup>&#8225;</sup>"
     venue: "Findings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL), 2025."
-    paper_pdf: ""
-    code: ""
+    code: "https://github.com/xufliu/RL-Guider"
     selected: y
 
   - title: "RISE: Radius of Influence based Subgraph Extraction for 3D Molecular Graph Explanation"
-    authors: "Jingxiang Qu*, Wenhan Gao*, Jiaxing Zhang, <b>Xufeng Liu</b>, Hua Wei, Haibin Ling, Yi Liu"
+    authors: "Jingxiang Qu<sup>*</sup>, Wenhan Gao<sup>*</sup>, Jiaxing Zhang, <b>Xufeng Liu</b>, Hua Wei, Haibin Ling, Yi Liu"
     venue: "The Forty-second International Conference on Machine Learning (ICML), 2025"
     paper_pdf: "https://arxiv.org/pdf/2505.02247"
     code: "https://github.com/QuJX/RISE"
@@ -18,7 +17,7 @@ papers:
     authors: "<b>Xufeng Liu</b>, Dongsheng Luo, Wenhan Gao, Yi Liu"
     venue: "Proceedings of the 31st SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), 2025."
     paper_pdf: "https://dl.acm.org/doi/10.1145/3690624.3709302"
-    project_page: "https://www.youtube.com/watch?v=l0g15VZxiFs"
+    video: "https://www.youtube.com/watch?v=l0g15VZxiFs"
     code: "https://github.com/xufliu/3DGraphX"
     selected: y
 
